@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabajo Practico N°1</title>
+</head>
+<body>
+    <section>
+        <h1>Trabajo Practico N°1</h1>
+        <hr>
+        <div>
+            <h3>Respuesta 1</h3>
+            <?php
+                echo "Hola Mundo !!"; //Imprimir en pantalla Hola mundo
+            ?>
+        </div>
+        <div>
+            <h3>Respuesta 2</h3>
+            <?php
+                $hola = "Hola mundo"; // Variable 
+                echo $hola; // Imprimir en pantalla Variable
+            ?>
+        </div>
+        <div>
+            <h3>Respuesta 3</h3>
+            <?php
+                $uno = 200;
+                $dos = 150;
+                
+                echo "Suma: ".$uno+$dos. "<br>"; 
+                echo "Resta: ", $uno-$dos. "<br>";
+                echo "Divicion: ", $uno/$dos. "<br>";
+                echo "Resto: ", $uno%$dos. "<br>";
+                echo "Multiplicacion: ", $uno*$dos. "<br>";
+            ?>
+        </div>
+        <div>
+            <h3>Respuesta 4</h3>
+            <?php
+                //Formula para pasar de c° a F° . F° = (C° * 1,8)+32
+                $celsius = 20;
+                $fijo = 1.8;
+                $fijodos = 32;
+                $resultado = $celsius*$fijo+$fijodos;
+
+                echo "°F".$resultado;
+            ?>
+        </div>
+        <div>
+            <h3>Respuesta 5</h3>
+            <?php
+                $base = 18;
+                $altura = 12;
+                $radeo = 30;
+                $pi = 3.1416;
+                $perimetrorectangulo = $base*2 + $altura*2;
+                $arearectangulo = $base*$altura;
+                $perimetrocirculo = 2*$pi*$radeo;
+                $areacirculo = $pi*$radeo*$radeo;
+
+                echo "El Perimetro del rectangulo es: ".$perimetrorectangulo."cm <br>";
+                echo "El Area del rectangulo es: ".$arearectangulo."cm <br>";
+                echo "El Perimetro del circulo es: ".$perimetrocirculo."cm <br>";
+                echo "El Area del circulo es: ".$areacirculo."cm";
+
+            ?>
+        </div>
+    </section>
+</body>
+</html>

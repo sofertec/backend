@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabajo Practico N°2</title>
+</head>
+<body>
+    <?php
+        //Punto 1 Creo la variable n1 y valido que sea un nomero positivo
+        $n1 = 10;
+
+        if($n1 >= 0){
+            echo "Tu numero es Positivo :) <br>";
+        }else{
+            echo "Tu numero es Negativo <br>"; //cree el else para probar 
+        }
+
+        //Punto numero 2 creo la variable n2 y valido que sea mayor a 1 y menor a 10
+        $n2 = 9;
+
+        if($n2 > 1 && $n2 < 10 ){
+
+            echo "Tu numero es mayor a 1 y menor a 10 <br>";
+        }
+
+        //Punto numero 3 creo la variable n3 y valido que sea mayor a 10 o menor a 2 
+
+        $n3 = 5;
+
+        if ($n3 > 10 || $n3 < 2){
+
+            echo "Tu numero es mayor a 10 o menor que 2 <br>";
+        }else {
+            echo "Tu numero no cumple con las condiciones <br>";
+        }
+
+        //Punto numero 4 cree un if con 3 condiciones en la cual veifica si numero1 y numero2 son mayor ,menor o igual.
+
+        $numero1 = 100;
+        $numero2 = 100;
+
+        if ($numero1 > $numero2) {
+            
+        echo "El numero1 es mas grande que el numero2 y la suma es: ".$numero1+$numero2."<br>";
+        echo "El numero1 es mas grande que el numero2 y la resta es : ".$numero1-$numero2."<br>";
+        }elseif ($numero1 < $numero2){
+            echo "El numero1 es mas chico que el numero2 y la multiplicacion es: ".$numero1*$numero2."<br>";
+            echo "El numero1 es mas chico que el numero2 y el resto es: ".$numero1%$numero2."<br>";
+        }else{
+            echo "Los numero son iguales";
+        }
+          
+    ?>
+</body>
+</html>

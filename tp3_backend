@@ -1,0 +1,50 @@
+<?php
+print "<p>Comienzo del punto 1 </p>";
+for ($i=0; $i <=100 ; $i++) { 
+    print "$i ";
+}
+print "<p>Fin del punto 1 </p>";
+
+print "<p>Comienzo del punto 2 </p>";
+for ($a=100; $a >=1 ; $a--) { 
+    print "$a ";
+}
+print "<p>Fin del punto 2 </p>";
+
+print "<p>Comienzo del punto 3 </p>";
+for ($b=0; $b <=100 ; $b++) { 
+    if ($b % 2 == 0) {
+      print  "$b ";
+    }
+}
+print "<p>Fin del punto 3 </p>";
+
+print "<p>Comienzo del punto 4 </p>";
+for ($c=0; $c <=100 ; $c++) { 
+    if ($c % 2 == 1) {
+      print  "$c ";
+    }
+}
+print "<p>Fin del punto 4 </p>";
+
+print "<p>Comienzo del punto 5 </p>";
+
+$suma = 0;
+
+for ($d=1; $d <=20 ; $d++) { 
+    $suma += $d;
+}
+print $suma;
+print "<p>Fin del punto 5 </p>";
+
+print "<p>Comienzo del punto 6 </p>";
+
+$sumaPares = 0;
+
+for ($e = 2; $e <= 20; $e += 2) {
+    $sumaPares += $e;
+}
+
+print "La suma de números pares del 1 al 20 es: $sumaPares";
+print "<p>Fin del punto 6 </p>";
+?>

@@ -1,0 +1,47 @@
+<?php
+//punto 1
+
+$primos = [2,4,6,8,10];
+
+foreach ($primos as $resultado){
+    print $resultado."<br>";
+}
+
+//punto 2
+
+$cosas = array ('pedro','ana',1);
+
+print_r($cosas);
+
+//Punto 3
+
+$datos = [
+    'nombre'=> 'Pedro',
+    'apellido'=> "Torres",
+    'direccion'=> "Av.Mayo 3703",
+    'telefono'=> 1122334455,
+];
+
+//Punto 4
+
+$ciudades = ["Madrid","Barcelona","Londres","New York","Los Angeles","Chicago"];
+
+foreach($ciudades as $z => $j){
+    print "La ciudad con el índice $z  tiene el nombre $j <br>";
+}
+
+//Punto 5
+
+$ciudades1 = [
+    'MD'=> 'Madrid',
+    'BCL'=> "Barcelona",
+    'LD'=> "Londres",
+    'NY'=> "New York",
+    'LA'=> "Los Ángeles",
+    'CCG'=> "Chicago",
+];
+
+foreach($ciudades1 as $e => $f){
+    print "El índice de $e es $f <br>";
+}
+?>

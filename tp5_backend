@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  </head>
+  <body>
+<div class = "container">
+<?php
+include 'conexion.php';
+
+$consulta = "SELECT*FROM ropa";
+
+$datos = mysqli_query($con, $consulta);
+
+if (mysqli_num_rows($datos) > 0) {
+    echo "<table class='table table-sm table-hover'>";
+    echo "<thead class='thead-dark'>";
+    echo "<tr><th>Prenda</th><th>Marca</th><th>Talle</th><th>Precio</th></tr>";
+    echo "</thead>";
+    echo "<tbody class = 'table-group-divider'>";
+
+    while ($row = mysqli_fetch_assoc($datos)) {
+        echo "<tr>";
+        echo "<td>" . $row["prenda"] . "</td>";
+        echo "<td>" . $row["marca"] . "</td>";
+        echo "<td>" . $row["talle"] . "</td>";
+        echo "<td>" . $row["precio"] . "</td>";
+        echo "</tr>";
+    }
+
+    echo "</tbody>";
+    echo "</table>";
+} else {
+    echo "<div class='alert alert-danger text-center'>
+    No se encontraron registros.
+    </div>";
+};
+
+$consulta2 = "SELECT*FROM ropa WHERE prenda = 'buzo'";
+$resultado = mysqli_query($con, $consulta2);
+
+if (mysqli_num_rows($resultado) > 0) {
+    echo "<table class='table table-bordered table-striped table-hover'>";
+    echo "<thead class='thead-dark'>";
+    echo "<tr><th>Prenda</th><th>Marca</th><th>Talle</th><th>Precio</th></tr>";
+    echo "</thead>";
+    echo "<tbody>";
+    while ($roww = mysqli_fetch_assoc($resultado)) {
+        echo "<tr>";
+        echo "<td>" . $roww["prenda"] . "</td>";
+        echo "<td>" . $roww["marca"] . "</td>";
+        echo "<td>" . $roww["talle"] . "</td>";
+        echo "<td>" . $roww["precio"] . "</td>";
+        echo "</tr>";
+    }
+    echo "</tbody>";
+    echo "</table>";
+} else {
+    echo "<div class='alert alert-danger text-center'>
+    No tenemos Buzos.
+    </div>";
+};
+
+$consulta3 = "SELECT*FROM ropa WHERE marca = 'nike'";
+$peticion = mysqli_query($con, $consulta3);
+
+if (mysqli_num_rows($peticion) > 0) {
+    echo "<table class='table table-bordered table-striped table-hover'>";
+    echo "<thead class='thead-dark'>";
+    echo "<tr><th>Prenda</th><th>Marca</th><th>Talle</th><th>Precio</th></tr>";
+    echo "</thead>";
+    echo "<tbody>";
+    while ($rowww = mysqli_fetch_assoc($peticion)) {
+        echo "<tr>";
+        echo "<td>" . $rowww["prenda"] . "</td>";
+        echo "<td>" . $rowww["marca"] . "</td>";
+        echo "<td>" . $rowww["talle"] . "</td>";
+        echo "<td>" . $rowww["precio"] . "</td>";
+        echo "</tr>";
+    }
+    echo "</tbody>";
+    echo "</table>";
+} else {
+    echo "<div class='alert alert-danger text-center'>
+    No tenemos productos Nike.
+    </div>";
+};
+
+$consulta4 = "SELECT*FROM ropa WHERE precio = '500'";
+$peticion1 = mysqli_query($con, $consulta4);
+
+if (mysqli_num_rows($peticion1) > 0) {
+    echo "<table class='table table-bordered table-striped table-hover'>";
+    echo "<thead class='thead-dark'>";
+    echo "<tr><th>Prenda</th><th>Marca</th><th>Talle</th><th>Precio</th></tr>";
+    echo "</thead>";
+    echo "<tbody>";
+    while ($fila = mysqli_fetch_assoc($peticion1)) {
+        echo "<tr>";
+        echo "<td>" . $fila["prenda"] . "</td>";
+        echo "<td>" . $fila["marca"] . "</td>";
+        echo "<td>" . $fila["talle"] . "</td>";
+        echo "<td>" . $fila["precio"] . "</td>";
+        echo "</tr>";
+    }
+    echo "</tbody>";
+    echo "</table>";
+} else {
+    echo "<div class='alert alert-danger text-center'>
+    No tenemos productos de $500.
+    </div>";
+};
+
+mysqli_close($con);
+?>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
+</html>
